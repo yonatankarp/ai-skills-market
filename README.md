@@ -50,14 +50,38 @@ More plugins (other languages, adjacent patterns like CQRS / event sourcing / he
 
 ## Installing
 
+### Via the Claude Code plugin marketplace (canonical)
+
 ```bash
 # Inside Claude Code
-/plugin marketplace add yonatankarp/ai-skills-market   # once published
+/plugin marketplace add yonatankarp/ai-skills-market
 /plugin install ddd-core@ai-skills-market
 /plugin install ddd-kotlin@ai-skills-market
 ```
 
-Or, for local development:
+### Via the `skills` CLI (npx, no Claude Code commands)
+
+The community [`vercel-labs/skills`](https://github.com/vercel-labs/skills) CLI can install individual skills directly from this repo. It recursively discovers the SKILL.md files under `plugins/<plugin>/skills/`, so no special config is needed on the consumer side.
+
+```bash
+# Browse what's available (dry run — no install)
+npx skills add yonatankarp/ai-skills-market -l
+
+# Install one skill globally for your user
+npx skills add yonatankarp/ai-skills-market --skill ddd-design -g
+
+# Install all 18 skills globally
+npx skills add yonatankarp/ai-skills-market --all -g
+
+# Install into the current project (creates ./.claude/skills/)
+npx skills add yonatankarp/ai-skills-market --skill ddd-aggregate
+```
+
+The CLI auto-detects Claude Code as the target agent and writes skills into the right directory.
+
+### Local development
+
+To install from a local clone (e.g., while authoring or contributing):
 
 ```bash
 /plugin marketplace add ~/Projects/ai-skills-market
