@@ -1,0 +1,10 @@
+{
+  "name": "ddd-core",
+  "version": "0.1.0",
+  "description": "Language-agnostic Domain-Driven Design skill suite. Provides four mode entry-point skills (design, review, refactor, implement) and thirteen pattern primitive skills covering Evans's strategic and tactical patterns.",
+  "author": {
+    "name": "Yonatan Karp-Rudin",
+    "email": "yonvata@gmail.com"
+  },
+  "license": "MIT"
+}

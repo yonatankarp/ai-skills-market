@@ -1,0 +1,25 @@
+{
+  "name": "ai-skills-market",
+  "owner": {
+    "name": "Yonatan Karp-Rudin",
+    "email": "yonvata@gmail.com"
+  },
+  "metadata": {
+    "description": "Open-source Claude Code skill marketplace. First plugins cover Domain-Driven Design — language-agnostic core plus Kotlin idiom adapter.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "ddd-core",
+      "description": "Language-agnostic Domain-Driven Design skills: mode entry points (design, review, refactor, implement) and pattern primitives (bounded context, aggregate, value object, domain event, …).",
+      "source": "./plugins/ddd-core",
+      "strict": false
+    },
+    {
+      "name": "ddd-kotlin",
+      "description": "Kotlin idiom adapter for ddd-core. Maps DDD pattern decisions to idiomatic Kotlin (data/value/sealed classes, Result, Spring, Arrow).",
+      "source": "./plugins/ddd-kotlin",
+      "strict": false
+    }
+  ]
+}

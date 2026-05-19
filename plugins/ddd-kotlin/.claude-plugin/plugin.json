@@ -1,0 +1,10 @@
+{
+  "name": "ddd-kotlin",
+  "version": "0.1.0",
+  "description": "Kotlin idiom adapter for ddd-core. Translates language-agnostic DDD pattern decisions into idiomatic Kotlin: data classes for value objects, value classes for typed IDs, sealed hierarchies for sum types, Result for fallible operations.",
+  "author": {
+    "name": "Yonatan Karp-Rudin",
+    "email": "yonvata@gmail.com"
+  },
+  "license": "MIT"
+}
