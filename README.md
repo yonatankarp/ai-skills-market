@@ -11,6 +11,43 @@ An open-source [Claude Code](https://docs.claude.com/en/docs/claude-code) skill 
 
 More plugins (other languages, adjacent patterns like CQRS / event sourcing / hexagonal architecture) will live as siblings under `plugins/`.
 
+## Skill index
+
+### `ddd-core` (17 skills)
+
+**Mode skills (entry points):**
+
+- [`ddd-design`](plugins/ddd-core/skills/ddd-design/SKILL.md) — guide a new domain model from brief to draft
+- [`ddd-review`](plugins/ddd-core/skills/ddd-review/SKILL.md) — PR-style audit against the DDD anti-pattern catalog
+- [`ddd-refactor`](plugins/ddd-core/skills/ddd-refactor/SKILL.md) — sequence small steps toward a target DDD shape
+- [`ddd-implement`](plugins/ddd-core/skills/ddd-implement/SKILL.md) — bridge pattern decisions to code via a language adapter
+
+**Strategic patterns:**
+
+- [`ddd-ubiquitous-language`](plugins/ddd-core/skills/ddd-ubiquitous-language/SKILL.md)
+- [`ddd-bounded-context`](plugins/ddd-core/skills/ddd-bounded-context/SKILL.md)
+- [`ddd-context-mapping`](plugins/ddd-core/skills/ddd-context-mapping/SKILL.md)
+- [`ddd-subdomain-classification`](plugins/ddd-core/skills/ddd-subdomain-classification/SKILL.md)
+
+**Tactical patterns:**
+
+- [`ddd-entity`](plugins/ddd-core/skills/ddd-entity/SKILL.md)
+- [`ddd-value-object`](plugins/ddd-core/skills/ddd-value-object/SKILL.md)
+- [`ddd-aggregate`](plugins/ddd-core/skills/ddd-aggregate/SKILL.md)
+- [`ddd-domain-event`](plugins/ddd-core/skills/ddd-domain-event/SKILL.md)
+- [`ddd-domain-service`](plugins/ddd-core/skills/ddd-domain-service/SKILL.md)
+- [`ddd-repository`](plugins/ddd-core/skills/ddd-repository/SKILL.md)
+- [`ddd-factory`](plugins/ddd-core/skills/ddd-factory/SKILL.md)
+
+**Cross-cutting:**
+
+- [`ddd-anti-patterns`](plugins/ddd-core/skills/ddd-anti-patterns/SKILL.md) — catalog cited by `ddd-review` and `ddd-refactor`
+- [`ddd-deeper-insight`](plugins/ddd-core/skills/ddd-deeper-insight/SKILL.md) — Evans Part III techniques
+
+### `ddd-kotlin` (1 skill)
+
+- [`ddd-kotlin-idioms`](plugins/ddd-kotlin/skills/ddd-kotlin-idioms/SKILL.md) — pattern → idiomatic Kotlin (stdlib only, no framework opinions)
+
 ## Installing
 
 ```bash
