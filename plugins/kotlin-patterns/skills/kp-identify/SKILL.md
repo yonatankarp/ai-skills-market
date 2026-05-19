@@ -29,12 +29,18 @@ Walk the problem through these diagnostic questions, in this order:
 **2. Is it about concurrency?**
 - *I want to do work concurrently / off the main thread* → start with `kp-coroutine-scope` (lifecycle ownership), then `kp-launch-vs-async` (which primitive), then `kp-dispatchers` (which thread pool).
 - *I have multiple concurrent operations and need to handle their cancellation / failure* → `kp-structured-concurrency`.
+- *I need coroutines to coordinate by passing messages (pipeline, fan-out, fan-in)* → `kp-channels`.
+- *I need to wait on whichever of several suspending sources is ready first (channels, deferreds, timeouts)* → `kp-select`.
+- *I want to confine mutable state behind a single coroutine, mutated via messages* → `kp-actor-pattern`.
+- *I'm wrapping a callback-based API as a `suspend fun` (one-shot)* → `kp-callback-bridging`.
+- *I'm writing tests for coroutine code (need virtual time, deterministic dispatch)* → `kp-testing-coroutines`.
 
 **3. Is it about a stream of values over time?**
 - *Latest value matters, observable state* → `StateFlow` (see `kp-flow-cold-vs-hot`).
 - *Events, no required current value, possibly buffered* → `SharedFlow` (see `kp-flow-cold-vs-hot`).
 - *Cold pull-style stream, re-runs per collector* → `Flow` (see `kp-flow-cold-vs-hot`).
 - *Transforming / combining / debouncing streams* → `kp-flow-operators`.
+- *Many-shot callback emitting events* → `kp-callback-bridging` (`callbackFlow`).
 
 **4. Is it a configuration / construction problem that reads better as a recipe?**
 - *Type-safe DSL (HTML, Gradle config, builder API)* → `kp-type-safe-builders`.
